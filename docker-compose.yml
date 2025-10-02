@@ -1,0 +1,12 @@
+services:
+  llm-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/app
+    stdin_open: true  # équivalent à -i en ligne de commande
+    tty: true         # équivalent à -t en ligne de commande
+    ports:
+      - "8501:8501"   # Expose le port Streamlit
+    command: /bin/sh
