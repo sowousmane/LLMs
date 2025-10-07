@@ -3,6 +3,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    container_name: llms_llm-app_1
     volumes:
       - .:/app
     stdin_open: true  # équivalent à -i en ligne de commande
